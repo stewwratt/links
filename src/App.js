@@ -26,7 +26,7 @@ function App() {
             rel="noopener noreferrer"
           >
             <h3>Unbooked Waitlist</h3>
-            <p>Join the waitlist for my barber booking platform</p>
+            <p>Barber booking platform. Built different.</p>
           </a>
 
           <a
@@ -36,7 +36,7 @@ function App() {
             rel="noopener noreferrer"
           >
             <h3>Newsletter</h3>
-            <p>Subscribe to my weekly newsletter</p>
+            <p>Weekly signal. Quiet. No hype. Just real.</p>
           </a>
         </div>
 
@@ -47,8 +47,8 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 4h1.5c1.07 2.48 3.77 3.97 6.5 4v2c-1.2-.05-2.4-.4-3.5-1v5c0 5.5-6 7-8.5 3-2.5-4 1-8.5 5.5-7.5v2c-.76-.12-2.51-.25-3 1C6 15 9 16.5 9 14V4z"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" fill="currentColor">
+              <path d="M216.49 88a72.08 72.08 0 0 1-41.17-13.09A71.72 71.72 0 0 1 152 39.51V160a64 64 0 1 1-64-64 62.7 62.7 0 0 1 15.63 2A40 40 0 1 0 104 200a40 40 0 0 0 40-40V24h32a56.06 56.06 0 0 0 56 56Z"></path>
             </svg>
             TikTok: @joshlukestewart
           </a>
