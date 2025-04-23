@@ -17,13 +17,73 @@ body {
   font-family: 'Red Hat Display', sans-serif;
 }
 
+/* Loader animation */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.loader-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--gradient-start);
+  animation: spin 1s infinite linear;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background-clip: padding-box;
+  box-shadow: 0 0 15px rgba(125, 185, 232, 0.5);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state - initially hide elements */
+.profile:not(.fade-in),
+.links-section:not(.fade-in),
+.social-icons:not(.fade-in),
+footer:not(.fade-in) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Page transition */
 .App {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 1.6rem;
+}
+
+.App.loaded {
+  opacity: 1;
 }
 
 .container {
