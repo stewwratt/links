@@ -46,8 +46,8 @@ function App() {
           <div className={`profile ${elementsLoaded.profile ? 'fade-in' : ''}`}>
             <img src="/profile.jpeg" alt="Profile" className="profile-image" />
             <h1>Josh Stewart</h1>
-            <p className="profile-bio">Systems engineer / ex-barber</p>
-            <p className="profile-tagline">Fueled by silence + signal</p>
+            <p className="profile-bio">skills that scale • agents in training</p>
+            <p className="profile-tagline">systems, silence & real-world AI </p>
             <div className="profile-stats">
               <span>19.6K Followers</span>
               <span>273.7K Likes</span>
