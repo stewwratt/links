@@ -70,7 +70,7 @@ function SystemsAudit() {
                             <br /><br />
 
                             <a href="https://cal.com/joshlukestewart/discovery" target="_blank" rel="noopener noreferrer" className="audit-book">
-                                <strong>Discovery Call – Systems Triage™ – $79 AUD</strong><br />                            </a>
+                                <strong>Discovery Call – Systems Triage™ – $29 AUD</strong><br />                            </a>
                         </p>
                         <p className="audit-subtext">
                             Not sure what you need yet? The Discovery Call is a short triage session to diagnose your biggest tech inefficiencies and determine if a full audit is the right move.
