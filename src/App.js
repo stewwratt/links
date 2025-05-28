@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import SystemsAudit from './components/SystemsAudit';
 
-function App() {
+function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [elementsLoaded, setElementsLoaded] = useState({
@@ -12,6 +14,16 @@ function App() {
   });
 
   useEffect(() => {
+    // Reset state to all hidden on mount
+    setIsLoaded(false);
+    setShowContent(false);
+    setElementsLoaded({
+      profile: false,
+      links: false,
+      social: false,
+      footer: false
+    });
+
     // Initial loading delay
     const initialTimer = setTimeout(() => {
       setIsLoaded(true);
@@ -47,22 +59,31 @@ function App() {
             <img src="/profile.jpeg" alt="Profile" className="profile-image" />
             <h1>Josh Stewart</h1>
             <p className="profile-bio">skills that scale • agents in training</p>
-            <p className="profile-tagline">systems, silence & real-world AI </p>
+            <p className="profile-tagline">systems, silence & real-world AI</p>
             <div className="profile-stats">
-              <span>19.6K Followers</span>
-              <span>273.7K Likes</span>
+              {/* <span>19.6K Followers</span>
+              <span>273.7K Likes</span> */}
             </div>
           </div>
 
           <div className={`links-section ${elementsLoaded.links ? 'fade-in' : ''}`}>
+            <Link to="/the-systems-audit" className="link-card">
+              <h3>The Systems Audit™</h3>
+              <p>Struggling to make your tools talk? Start here.</p>
+            </Link>
+
             <a
               href="https://join.unbooked.me"
-              className="link-card"
+              className="link-card featured-card"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h3>Unbooked Waitlist</h3>
-              <p>Barber booking platform. Built different.</p>
+              <div className="status-indicator">
+                <span className="status-dot"></span>
+                <span className="status-text">NEW</span>
+              </div>
+              <h3>Free Price Increase Calculator</h3>
+              <p>Discover your hidden revenue potential in 60 seconds</p>
             </a>
 
             <a
@@ -72,7 +93,7 @@ function App() {
               rel="noopener noreferrer"
             >
               <h3>Newsletter</h3>
-              <p>Weekly signal. Quiet. No hype. Just real.</p>
+              <p>Get weekly updates, ideas, and resources - no spam, just useful stuff.</p>
             </a>
           </div>
 
@@ -114,6 +135,17 @@ function App() {
         </div>
       )}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/the-systems-audit" element={<SystemsAudit />} />
+      </Routes>
+    </Router>
   );
 }
 
